@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/*
+
+    What do the mixins do? Avoid writing media query over and over again
+    They provide a semantic media query mixin for the following:
+
+    Respond above XX.
+    Respond below XX.
+    Respond between XX and XX.
+    Where XX is the two letter Bootstrap breakpoint (i.e. sm, md).
+
+    Usual way: @media (min-width: 768px) and (max-width: 991px) {
+        Target devices between 768px and 992px. 
+    }
+
+
+*/
+/*
+    It’s best practice to use Bootstrap’s breakpoints in your own code but it’s painful to write them all the time. To get around that I use a Sass map of values:
+*/
+/*
+    This means the breakpoint values are only ever written once. Map values like these can be accessed using the Sass' map-get function:
+*/
+/*
+
+    Before going ahead and writing the media query it’s a good idea to ensure the key exists in the $breakpoints map in case you make a typo (i.e. @include respond-above(small)).
+
+    To do this we use Sass' map-has-key function
+
+*/
+@media (min-width: 576px) {
+  .card {
+    display: block;
+  }
+}
+@media (max-width: 991px) {
+  .card {
+    display: block;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+/* 
+  Respond Between
+  - it checks both lower and upper keys exist in the breakpoints before writing this in the media query.
+
+*/
+/*
+    Respond between
+    Here we want to check that both the $lower and $upper keys exist in the $breakpoints map before writing the media query.
+*/
+@media (min-width: 576px) and (max-width: 1399px) {
+  .card img {
+    display: block;
+    height: 100%;
+  }
+}

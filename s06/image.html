@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="image.css">
+    <title>Image Responsiveness</title>
+</head>
+<body>
+    <h1>Image Responsiveness</h1>
+
+    <img src="hard.png" alt="drinks" id="responsive" />
+
+    <!--GOAL: MAKING THE PICTURE AS MODAL AND RESPONSIVE-->
+    <div id="myModal" class="modal">
+        <span class="close">&times</span>
+        <img class="modal-content" id="img01" />
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        //Step 1: Get the modal - the one that pops up to the screen
+        var modal = document.getElementById("myModal");
+
+        //Step2: Get the image and insert it inside the modal. Use the "alt" text as a caption
+        var img = document.getElementById ("responsive");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("img01");
+
+        //initialize the variables
+        img.onclick = function(){
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        //Step 3: Get the <span> element that closes the modal.
+        var span = document.getElementsByClassName("close")[0];
+
+        //Step4: When the user clicks on <span> (x), close the modal.
+
+        span.onclick = function()
+        {
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+/*Universal selector*/
+* {
+    font-family: 'Lobster', cursive;
+}
+
+h1 {
+    color: brown;
+}
+
+/*ID Selector*/
+
+#title-1 {
+    color: #0AB6FB;
+}
+
+/*Class Selector*/
+.title-2 {
+    color: violet;
+    text-align: center;
+}
+
+/*Attribute Selector*/
+[type="text"] {
+    background-color: aquamarine;
+}
+
+/*Combinator Selector*/
+
+/*Descendant Selector
+- selects/targets "all elements" that matches the specified element
+
+Syntax: first element child element {
+    property: value
+}
+*/
+
+ /* div p {
+    background-color: red;
+} */
+
+/* Child Selector
+- selects/targets "all" elements that are all "children" of a specified element
+*/
+
+/* div > p {
+    background-color: chocolate;
+}  */
+
+/*Adjacent Sibling Selector (+)
+    - selects/targets an element that is directly after (katabi) the first selector
+*/
+
+/* p + p {
+    background-color: maroon;
+}
+
+div + p {
+    background-color: #E228BD;
+} */
+
+/* div + p {
+    background-color: red;
+} */
+
+/*
+General Sibling Selector (~)
+
+*/
+
+/* p ~ p {
+    background-color: fuchsia;
+} */
+
+/*
+Medium devices (landscape tablet, 500px and up)
+*/
+@media only screen and (min-width: 500px) {
+    .screen {
+        background-color:pink;
+        
+    }
+}
+
+/* Large Devices (laptops and desktops, 900px and up)*/
+@media only screen and (min-width: 900px) {
+    .screen {
+        background-color:blue;
+    }
+}
+
+/*Pseudo Class
+selector: pseudo-class {property:value}
+*/
+
+/*Unlisted Link*/
+a:link {
+    color:red;
+}
+
+/*visited link*/
+a:visited {
+    color:green;
+}
+
+/*mouse over link */
+a:hover {
+    color:orange;
+}
+
+/*selected link*/
+a:active {
+    color:dodgerblue;
+}
+
+/*
+    Pseudo Elements
+    - used to style a specific part of an element.
+    syntax: selector::pseudo-element {property:value}
+*/
+
+/*First line - when we shrink or resize our web pages, the first line of a sentence makes a change*/
+/* p::first-line {
+    color: #ff0000;
+    font-variant: small-caps;
+} */
+
+p::first-letter {
+    color: brown;
+    font-size: 200%;
+}
+
+/*manipulating pictures in CSS*/
+#my_dog img{
+    width:10%;
+    height:10%;
+    border-radius: 4px;
+}
+
+/*manipulating unordered list */
+li {
+    list-style-type: none;
+}
+
+ul > li {
+    letter-spacing: 4px;
+}
+
+
+.another_example #p1 {
+    background-color: blanchedalmond;
+    padding:20px;
+    margin: 20px;
+}
+
+.kapatid {
+    background-color: pink;
+    font-color: blue;
+    padding: 10px;
+    margin: 10px;
+}

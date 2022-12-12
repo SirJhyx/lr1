@@ -1,0 +1,132 @@
+img {
+    border: 3px solid blueviolet;
+}
+
+#responsive
+{
+    width: 50%;
+    height: 50%;
+
+    border-radius: 5px;
+    cursor:pointer;
+    transition: 0.3s;
+}
+
+#responsive:hover {
+    opacity: 0.7; /*talks about the value on how the transparency will it be. NOTE: The lower the value, the more transparent it is.*/
+    /*it makes the image blurry*/
+}
+
+/*Modal Background*/
+.modal {
+    display: none; /*hidden as default */
+    position: fixed; /*stay in place*/
+    z-index: 1; /* sit on top */
+    /*
+        stack order of an element.
+        - this property works when position elements and flex items are present
+    */
+    padding-top: 100px; /*location of the box */
+    left:0;
+    top:0;
+    width: 100%; /*full width*/
+    height: 100%; /*full height*/
+    overflow: auto; /*enables scroll if needed */
+    /*clips the content or add scrolls based on the elements declared in the overflow*/
+    background-color: rgb(0,0,0); /*fallback colors*/
+    background-color: rgba(0,0,0,0.9); /*black with opacity*/
+}
+
+/*Modal Content (image)*/
+.modal-content {
+    margin:auto;
+    display:block;
+    width: 80%;
+    max-width:700px;
+}
+
+/*Caption the modal image*/
+#caption {
+    margin:auto;
+    display:block;
+    width:80%;
+    max-width:700px;
+    text-align: center;
+    color: #ccc;
+    padding:10px 0;
+    height:150px;
+}
+
+/* Add an animation */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration:0.6s;
+}
+
+/*
+    @webkit or AKA blink
+    - renders content in Safari and Chrome
+    - To mitigate the risk of cross platform incompatibility.
+    - used for transitions, transform, animation, calc, flexbox, columns
+*/
+
+/*
+    keyframe syntax
+    @keyframes animationname {
+        keyframe-selector {css-style;}
+    }
+
+    @keyframe - rule to specify animation code.
+    - animation is gradually changing from one set of CSS to another
+*/
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform:scale(0);
+    }
+    to {
+        -webkit-transform: scale(1);
+    }
+}
+
+@keyframes zoom {
+    from{ /*beginning of the animation */
+        transform: scale(0);
+    }
+    to { /*end of animation/animation is complete*/
+        transform: scale(1);
+        /* 2D/3D transformation of an event */
+        /*
+            transfer properties
+            rotate, scale, move, skew
+        */
+
+    }
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover, .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% image width on smaller screens */
+@media only screen and (max-width: 700px)
+{
+    .modal-content {
+        width:100%;
+    }
+}

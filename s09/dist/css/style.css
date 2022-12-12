@@ -1,0 +1,42 @@
+/*
+Step 1: Install Node JS 
+https://nodejs.org/en/
+select the version LTS
+
+Step 2: Open your GitBash
+Type the command npm install -g sass
+
+Step 3: In your VS Code, download the extension called Live SaSS compiler by Glenn Marks
+
+Step 4: Ensure that the files and folders are structured
+
+Step 5: Settings > Type Live SaSS > Settings: Formats
+    "liveSassCompile.settings.formats": [
+        
+        {
+         "format": "expanded",
+         "extensionName": ".css",
+         "savePath": "/dist/css"
+        }
+    ]
+*/
+
+.table {
+    background-color: blanchedalmond;
+    border: 3px;
+}
+
+.text-primary {
+    background-color: DarkGray;
+    box-shadow: 0 0 1px rgba(169, 169, 169. 0.25);
+    color: #fff;
+}
+
+/*Define mixin with two arguments*/
+.myArticle {
+    border: 1px solid blue;
+}
+
+.myNotes {
+    border: 2px solid red;
+}

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Portfolio with Bootstrap</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-primary fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="images/ada.png" alt="ada" width="30" height="30">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav text-white">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about">About Me</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </nav>
+
+          <!--Landing Page-->
+
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+                <button type="button" 
+                    data-bs-target="#carouselExampleIndicators" 
+                    data-bs-slide-to="0" 
+                    class="active" 
+                    aria-current="true" 
+                    aria-label="Slide 1">
+
+                </button>
+
+                <button type="button" 
+                    data-bs-target="#carouselExampleIndicators" 
+                    data-bs-slide-to="1" 
+                    aria-label="Slide 2">
+
+                </button>
+
+                <button type="button" 
+                    data-bs-target="#carouselExampleIndicators" 
+                    data-bs-slide-to="2" 
+                    aria-label="Slide 3">
+
+                </button>
+
+            </div>
+
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/ada_lovelace.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/ada_lovelace.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/ada_lovelace.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </header>
+
+        <!--About Me-->
+
+    <section>
+        <h1 class="pt-3 mt-3 text-center" id="about">About Me</h1>
+        <!--Start of Lady Ada's Profile-->
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  Basic Information
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <!--this is the content of the accordion-->
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta libero necessitatibus porro natus vero mollitia consequatur tempore iste, cupiditate ratione. Nulla, minima quos. Deserunt ipsum doloremque omnis unde illo modi.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  Programming Languages
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <img src="images/logo.png" alt="programming_languages">
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  Certificates
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                          <div class="col-md-4">
+                            <img src="images/kabogera.png" class="img-fluid rounded-start" alt="kabogera">
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <h5 class="card-title">Kabogera Award</h5>
+                              <p class="card-text">
+
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque temporibus iusto soluta laborum architecto consequuntur ipsum esse natus eius adipisci? Ea amet ex similique repellat modi enim reprehenderit maiores inventore.
+
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                          <div class="col-md-4">
+                            <img src="images/most_behaved.png" class="img-fluid rounded-start" alt="behaved">
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <h5 class="card-title">Most Behaved</h5>
+                              <p class="card-text">
+                                
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam a explicabo, eaque enim dolores omnis voluptatibus voluptatem fuga quidem veritatis ab et. Quod pariatur veritatis ipsum magni, consectetur corporis ex!
+
+                              </p>
+                              
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <!--Services Offered-->
+
+    <section>
+        <h1 class="text-center p-3" id="services">Services</h1>
+        <div class="card mb-3">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+            <img src="..." class="card-img-bottom" alt="...">
+          </div>
+    </section>
+
+    <footer class="text-bg-primary p-3 text-center" id="contact">
+        <!--
+            
+            How to include the Copyright sumbol in the footer section?
+            While holding the Alt Key, input 0169
+        
+        -->
+
+        <div class="row align-items-center">
+
+            <!--There are 12 columns in total-->
+            <div class="col-md-6">
+              <p>
+                <a href="https://toppng.com/free-image/facebook-logo-transparent-PNG-free-PNG-Images_79975" target="_blank">
+
+                    <img src="https://toppng.com/uploads/preview/facebook-logo-transparent-11549681696nullxylgyy.png" alt="facebook logo transparent PNG image with transparent background@toppng.com"
+                    width="50px" height="50px">
+                    
+                    </a>
+                    
+                    <a href="https://toppng.com/free-image/twitter-first-letter-text-png-PNG-free-PNG-Images_34041" target="_blank">
+                    
+                    <img src="https://toppng.com/uploads/preview/twitter-first-letter-text-png-11536001202hcbqwclkiv.png" alt="twitter first letter text png png - Free PNG Images@toppng.com" width="50px" height="50px">
+                    
+                    </a>
+              </p>
+            </div>
+            <div class="col-md-6">
+              CONTACT ME
+              <p>
+                <div class="mb-3">
+                    <label for="emailAdd" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="emailAdd" placeholder="name@example.com">
+                  </div>
+                  <div class="mb-3">
+                    <label for="message" class="form-label">Message/label>
+                    <textarea class="form-control" id="message" rows="3"></textarea>
+                </div>
+                <button type="button" class="btn btn-light">Send</button>
+                <button type="button" class="btn btn-light">Clear</button>
+              </p>
+            </div>
+          </div>
+        © Copyright ABC Company. 2022 All Rights Reserved.
+
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>

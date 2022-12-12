@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.first {
+    background-color: lightpink;
+    margin: 20px;
+    margin-bottom: 40px;
+    padding:20px;
+    border: 2px solid black;
+}
+
+.second {
+    background-color: fuchsia;
+    border: 2px solid black;
+    margin: 20px;
+    margin-top: 70px;
+    margin-bottom: 40px;
+    padding:20px;
+    padding-left: 50px;
+    padding-bottom:120px;
+}
+
+span {
+    background-color: lightblue;
+    border: 2px solid black;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top:20px;
+    margin-bottom: 20px;
+
+    padding: 20px;
+
+    display: block;
+}
+
+/* Display Properties
+Syntax: display : property;
+
+    - block : it lets the elements move it the next line, please see span as an example. It extends the entire horizontal line.
+
+    - inline - stays in horizontal direction
+
+    - inline-block - stays in the horizontal line but the block element doesn't accommodate the whole horizontal line. However, spacing from top to bottom are changed.
+*/
+
+.container {
+    background-color: lightgreen;
+    margin: 20px;
+    margin-top: 40px;
+    border: 10px solid purple;
+    padding: 20px;
+}
+
+h1 {
+    display: inline;
+    margin: 15px;
+    background-color: lightsalmon;
+    padding: 15px;
+    border: 5px dashed gray;
+}
+
+.third {
+    margin-top: 40px;
+}
+
+a {
+    background-color: lawngreen;
+    color: blue;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+}

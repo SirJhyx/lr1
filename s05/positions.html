@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="position.css">
+    <title>CSS Position and Layout</title>
+</head>
+<body>
+    <h1>Sentence Examples</h1>
+
+    <h2>Static Positon</h2>
+
+    <p class="staticPosition">
+        The quick brown fox jumps over the lazy dog.
+    </p>
+    
+    <h2>Relative Position</h2>
+    <p class="relativePosition">
+        The quick brown fox jumps over the lazy dog.
+    </p>
+
+    <h2>Absolute Position</h2>
+    <div>
+        <p class="relativePosition">Sentence</p>
+        <div>
+            <p class="absolutePosition">
+                The quick brown fox jumps over the lazy dog.
+            </p>
+        </div>
+    </div>
+
+    <h2>Fixed Position</h2>
+    <p class="fixedPosition">
+        The quick brown fox jumps over the lazy dog.
+    </p>
+
+    <h2>Sticky Position</h2>
+
+    <div class="stickyPosition">
+        The quick brown fox jumps over the lazy dog.
+    </div>
+
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores cum alias commodi perspiciatis sapiente. Laborum recusandae magni corrupti tempore asperiores minima explicabo. Ipsa, quos? Vel obcaecati ad molestias ex magni.
+
+    <h1>Playing with Snoopy</h1>
+
+    <p>
+        <h2>Static Position</h2>
+        <img class="staticPosition" src="snoopy.png">
+    </p>
+
+    <p>
+        <h2>Relative Position</h2>
+        <img class="relativePosition" src="snoopy.png">
+    </p>
+
+    <p>
+        <h2>Fixed Position</h2>
+        <img class="snoopyFixed" src="snoopy.png">
+    </p>
+
+    <p>
+        <h2>Another Fixed Position</h2>
+
+        <button class="buttonClick" onClick="tada()">Click Me!</button>
+    </p>
+    
+    <script> 
+        function tada()
+        {
+            alert("Tada");
+        }
+    </script>
+</body>
+</html>

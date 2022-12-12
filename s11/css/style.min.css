@@ -1,0 +1,1 @@
+@media(min-width: 576px){.card{display:block}}@media(max-width: 991px){.card{display:block}img{width:100%;height:auto}}@media(min-width: 576px)and (max-width: 1399px){.card img{display:block;height:100%}}

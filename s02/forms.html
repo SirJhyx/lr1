@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+</head>
+<body>
+    <!--HTML Forms - creates inputs and outputs that can a user interact-->
+    <!--Input element is for interactive controls-->
+    <h1>Sample Form</h1>
+    <form action="">
+        <!--it groups and identies that a user can interact with the web page-->
+        <p> <!--paragraph-->
+            <label for="fname">First Name:
+            <input type="text" id="fname" name="fname" placeholder="Enter your First Name" required>
+        </p>
+
+        <p>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" required>
+        </p>
+
+        <p>
+            <input type="submit" value="Submit">
+            <!--submit - confirms the values input by the user-->
+            <!--	Form handler – usual server page with scripts for processing inputs (backend)
+            -->
+            <input type="reset" value="Clear">
+            <!--Reset - removes the information provided by the user inside the form-->
+        </p>
+    </form>
+
+    <h1>Survey Form</h1>
+
+    <form action="">
+        <p>
+            <label for="fname">First Name:</label>
+            <input type="text" name="fname" id="fname">
+        </p>
+
+        <p>
+            <label for="lname">Last Name:</label>
+            <input type="text" name="lname" id="lname">
+        </p>
+
+        <p>
+            <label for="emailAdd">Email Address:</label>
+            <input type="email" name="emailAdd" id="emailAdd">
+        </p>
+
+        <p>
+            <input type="radio" name="eType" id="eType">
+            <label for="eType">Onsite</label>
+            <input type="radio" name="eType" id="eType">
+            <label for="eType">Online</label>
+        </p>
+
+        <p>
+            <label for="bNum">Batch Number:</label>
+            <select name="bNum" id="bNum">
+                <option value="select">Select</option>
+                <option value="b23">Batch 25</option>
+                <option value="b24">Batch 24</option>
+                <option value="b25">Batch 25</option>
+                <option value="b26">Batch 26</option>
+                <option value="b27">Batch 27</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="instructor">Instructor:</label>
+            <input type="text" name="instructor" id="instructor">
+        </p>
+
+        
+            What do you like about our bootcamp?
+        <p>
+            <input type="checkbox" name="classroom" id="classroom" value="classroom">
+            <label for="classroom">Classroom Experience</label> <br />
+
+            <input type="checkbox" name="expertise" id="expertise" value="expertise">
+            <label for="expertise">Instructor Expertise</label> <br />
+
+            <input type="checkbox" name="collaboration" id="collaboration" value="collaboration">
+            <label for="collaboration">Classmates Collaboration</label> <br />
+
+            <input type="checkbox" name="others" id="others" value="others">
+            <label for="others">Others</label>
+            <input type="text" name="others" id="others" placeholder="Please specify">
+
+        </p>
+
+        <p>
+            <label for="comments">Comments for your instructor</label>
+            <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Type full comments here." maxlength="100"></textarea>
+            <!--Placeholder - helps the user to guide them while filling up their form-->
+            <!--maxlength - number of characters to be input-->
+        </p>
+
+        <p>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </p>
+    </form>
+
+
+</body>
+</html>

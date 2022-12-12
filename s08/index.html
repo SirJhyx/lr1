@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- make sure that meta tags are included -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Introduction</title>
+
+    <!-- Bootstrap CSS is linked online -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    
+</head>
+<body>
+
+  <!--site Navigation and Explore Pre-Templates in Bootstrap-->
+
+  <!--Link on how to access the pre-defined table template
+      https://getbootstrap.com/docs/5.2/content/tables/#overview
+  -->
+
+    <table class="table table-dark table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!--Colored Links
+        https://getbootstrap.com/docs/5.2/helpers/colored-links/
+      -->
+
+      <!-- <a href="#" class="link-primary">Primary link</a>
+      <a href="#" class="link-secondary">Secondary link</a> -->
+      <a href="#" class="link-success">Success link</a>
+      <!-- <a href="#" class="link-danger">Danger link</a>
+      <a href="#" class="link-warning">Warning link</a>
+      <a href="#" class="link-info">Info link</a>
+      <a href="#" class="link-light">Light link</a>
+      <a href="#" class="link-dark">Dark link</a> -->
+
+      <!-- Background Colors
+      
+      -->
+
+      <h1>Background Colors</h1>
+      <div class="p-3 mb-2 bg-secondary bg-gradient">.bg-secondary</div>
+      <!--Padding and Margin values: highest is 5-->
+
+      <!--
+
+        Link: https://getbootstrap.com/docs/5.2/content/typography/#text-utilities
+      -->
+      
+      <h1>Typography Under Utilities</h1>
+      <figure>
+        <blockquote class="blockquote">
+          <p>A well-known quote, contained in a blockquote element.</p>
+        </blockquote>
+        <figcaption class="blockquote-footer">
+          Someone famous in <cite title="Source Title">Source Title</cite>
+        </figcaption>
+      </figure>
+
+
+
+
+      <p class="text-primary">.text-primary</p>
+      <p class="text-secondary">.text-secondary</p>
+      <p class="text-success">.text-success</p>
+      <p class="text-danger">.text-danger</p>
+      <p class="text-warning bg-dark">.text-warning</p>
+      <p class="text-info bg-dark">.text-info</p>
+      <p class="text-light bg-dark">.text-light</p>
+      <p class="text-dark">.text-dark</p>
+      <p class="text-body">.text-body</p>
+      <p class="text-muted">.text-muted</p>
+      <p class="text-white bg-dark">.text-white</p>
+      <p class="text-black-50">.text-black-50</p>
+      <p class="text-white-50 bg-dark">.text-white-50</p>
+
+
+      <div class="p-3 mb-2 bg-warning text-dark">.bg-warning</div>
+
+      <h1>Text Transform</h1>
+
+      <!--https://getbootstrap.com/docs/5.2/utilities/text/#text-transform-->
+
+      <p class="text-capitalize">
+
+        <!--it lets the text be capitalized on their first letter-->
+          
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam doloremque quae non magni. Amet numquam tenetur iusto nisi, aperiam voluptatem fugiat. At quam sed eum nobis placeat accusantium cumque beatae.
+
+
+      </p>
+
+      <p class="text-uppercase">
+
+        <!--It capitalizes all the text -->          
+        The quick brown fox jumps over the lazy dog.
+
+      </p>
+
+      <!--
+
+        Font Weight and Italic
+        https://getbootstrap.com/docs/5.2/utilities/text/#font-weight-and-italics
+
+      -->
+
+      <p class="fst-italic">
+
+        <!--font-italic is the previous attribute-->
+        Italic text.
+      </p>
+      <p class="fw-bold">Bold text.</p>
+      <p class="fw-bolder">Bolder weight text (relative to the parent element).</p>
+      <p class="fw-semibold">Semibold weight text.</p>
+
+      <!-- Text alignment
+        https://getbootstrap.com/docs/5.2/utilities/text/#text-alignment
+      -->
+
+      <p class="text-center">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus a aspernatur repudiandae in natus placeat corrupti voluptatibus, soluta ad, debitis voluptate, consequatur quasi exercitationem. Doloremque dolorem officia doloribus quaerat repellat?
+      </p>
+
+      <p class="text-end">
+
+        <!-- On the previous version, we use text-right-->
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus a aspernatur repudiandae in natus placeat corrupti voluptatibus, soluta ad, debitis voluptate, consequatur quasi exercitationem. Doloremque dolorem officia doloribus quaerat repellat?
+      </p>
+
+      <h1>Testing Element in Span is not working</h1>
+      <!-- <span class="text-center">Align this element in the center</span>
+          text properties are not working in the span element.
+      -->
+
+      <h1>Testing a Semantic Element</h1>
+      <section class="text-center">Using semantic element to align the text in the center</section>
+
+      <!--Text Center vs Justify
+
+        justify is no longer working in Bootstrap 5
+      -->
+
+      <p class="text-end">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi perspiciatis perferendis sequi! Suscipit minima eaque eligendi, maiores consequuntur eos corrupti quod quae, voluptatum possimus cupiditate corporis obcaecati temporibus, laudantium natus!
+
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus est voluptas ullam a at temporibus eum recusandae enim modi quia quibusdam, ipsam dolore optio obcaecati velit deserunt sed tempore ab.
+      </p>
+
+      <!--
+        
+        Display
+        Link: https://getbootstrap.com/docs/5.2/utilities/display/
+      
+      -->
+
+      <span class="d-block bg-success">Using span Element in display properties</span>
+      <div class="d-inline bg-primary p3">Using an inline element</div>
+
+      <!--Sizing width
+        Link: https://getbootstrap.com/docs/5.2/utilities/sizing/
+      -->
+      <div class="w-25 p-3" style="background-color: #eee;">Width 25%</div>
+      <div class="w-50 p-3" style="background-color: #eee;">Width 50%</div>
+      <div class="w-75 p-3" style="background-color: #eee;">Width 75%</div>
+      <div class="w-100 p-3" style="background-color: #eee;">Width 100%</div>
+      <div class="w-auto p-3" style="background-color: #eee;">Width auto</div>
+
+      <!--Responsive Image-->
+
+      <img src="hard.png" alt="liquor" height="100px" width="200px"
+       class="img-fluid img-thumbnail mx-auto d-block h-25 w-25 float-end" >
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <!--Combination of JS: Popper and bootstrap distribution-->
+</body>
+</html>
