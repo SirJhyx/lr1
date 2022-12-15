@@ -1,4 +1,4 @@
-import {Fragment} from 'react';
+import React from 'react';
 
 /*components*/
 import Banner from '../Components/Banner'
@@ -7,10 +7,10 @@ import CourseCard from '../Components/CourseCard'
 
 export default function Home(){
     return (
-        <Fragment>
+        <React.Fragment>
             <Banner />
             <Highlights />
             <CourseCard />
-        </Fragment>
+        </React.Fragment>
     )
 }

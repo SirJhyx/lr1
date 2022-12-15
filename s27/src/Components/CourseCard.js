@@ -45,7 +45,7 @@ export default function CourseCard({courseProp}){
     }, [seats])
 
     return (
-        <Container fluid className="mb-4">
+        <Container fluid className="mb-5 mt-5">
             <Row className='justify-content-center'>
                 <Col xs={10} md={8}>
                     <Card className='p-4'>

@@ -52,6 +52,36 @@ export default function Register(){
                                     }}
                                 />
                             </Form.Group>
+
+                            {/*password*/}
+                            <Form.Group className="mb-3" controlId="formBasicPassword">
+                                <Form.Label>Password</Form.Label>
+                                <Form.Control 
+                                    type="password" 
+                                    placeholder="Password"
+                                    value={password}
+                                    onChange={(e)=>{setPassword(e.target.value)}} />
+                            </Form.Group>
+
+                            {/*confirm password*/}
+                            <Form.Group className="mb-3" controlId="formBasicConfirmPassword">
+                                <Form.Label>Confirm Password</Form.Label>
+                                <Form.Control 
+                                    type="password" 
+                                    placeholder="Retype Password"
+                                    value={cp}
+                                    onChange={(e)=>{setCp(e.target.value)}} />
+                            </Form.Group>
+
+                            {/*confirm password*/}
+                            <Button 
+                                variant="primary" 
+                                type="submit"
+                                disabled={isActive}>
+
+                                    Submit
+                            </Button>
+                            
                         </Form>
                     </Col>
                 </Row>
