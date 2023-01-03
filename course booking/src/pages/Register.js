@@ -1,11 +1,6 @@
-import {useState, useEffect} from 'react';
-import {
-    Container,
-    Form,
-    Button
-} from 'react-bootstrap'
-
-import Swal from 'sweetalert2';
+import React,{useState, useEffect} from 'react';
+import {Container, Form, Button} from 'react-bootstrap';
+import Swal from 'sweetalert2'; 
 
 export default function Register(){
 
@@ -14,6 +9,17 @@ export default function Register(){
 	const [cpw, setCpw] = useState("")
     
 	const [isDisabled, setIsDisabled] = useState(true)
+
+
+	/*mini activity
+		
+		create a state for the button
+			if email, pw, cpw is empty && pw does not match cpw, keep button disabled
+			if states passed the requirement, activiate the button to be able to submit the form
+
+			screenshot the state for the button & the useEffect codes
+			answer by 6:20
+	*/
 
 	useEffect( ()=>{
 		if((email !== "" && password !== "" && cpw !== "") && 
@@ -36,7 +42,7 @@ export default function Register(){
         
         //send a request to our API collection
         //apply an environment variable in our fetch request.
-		fetch(`localhost/api/users/register `, {
+		fetch(` ${process.env.REACT_APP_API_URL}/api/users/register `, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'

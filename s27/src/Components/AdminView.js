@@ -2,7 +2,7 @@
 
 import {useState, Fragment, useEffect} from 'react';
 
-import {Container,Button, Row, Col, Col, Table, Modal, Form} from 'react-bootstrap';
+import {Container,Button, Row, Col, Table, Modal, Form} from 'react-bootstrap';
 
 import Swal from 'sweetalert2';
 
@@ -127,7 +127,7 @@ export default function AdminView(props){
 
         //create a function to populate data in the form upon clicking the Update button
 
-        const openEdit = (courseId) => {
+        const openEdit = () => {
             fetch("http://localhost:4000/api/courses/${courseId}", {
                 headers: {
                     "Authorization" : `Bearer ${localStorage.getItem("token")}`
@@ -144,7 +144,7 @@ export default function AdminView(props){
         }
 
         //edit course function to be invoked when onSubmit event takes place
-        const editCourse = (e, courseId) => {
+        const editCourse = (e) => {
             e.preventDefault()
 
             fetch("http://localhost:4000/api/courses/${courseId}/edit", {
@@ -183,4 +183,155 @@ export default function AdminView(props){
                 }
             })
         }
+
+        //archive course
+        const archiveCourse = (courseId, isActive) => {
+            fetch(`http://localhost:4000/api/courses/${courseId}/archive`, {
+                method: "PUT",
+                headers: {
+                    "Content-Type" : "application/json",
+                    "Authorization" : `Bearer ${localStorage.getItem("token")}` 
+                },
+                body: JSON.stringify({
+                    isActive:!isActive
+                })
+            })
+            .then(response => response.json())
+            .then (data => {
+                if (data === true) {
+                    fetchData()
+
+                    Swal.fire({
+                        title: "Success",
+                        icon: "success",
+                        text: "Course disabled."
+                    })
+                }else {
+                    fetchData()
+
+                    Swal.fire({
+                        title: "Something went wrong",
+                        icon: "error",
+                        text: "Please try again"
+                    })
+
+                }
+            })
+        }
+
+        //layout for admin dashboard
+        return (
+            <Container>
+                <h2 className="text-center">Admin Dashboard</h2>
+                <Row className="justify-content-center">
+                    <Col>
+                        <div className="text-right">
+                            <Button onClick={openAdd}>Add New Course</Button>
+                        </div>
+                    </Col>
+                </Row>
+
+                <Table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Descrption</th>
+                            <th>Price</th>
+                            <th>Availability</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {courses}
+                    </tbody>
+                </Table>
+
+                {/*Add course using a modal*/}
+                <Modal show = {showAdd} onHide={closeAdd}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Add Course</Modal.Title>
+                    </Modal.Header>
+
+                    <Modal.Body>
+                        <Form onSubmit={(e) => addCourse(e)}>
+                            <Form.Group controlId='courseName'>
+                                <Form.Label>Course Name:</Form.Label>
+                                <Form.Control 
+                                    type="text" 
+                                    value={name} 
+                                    onChange={(e) => setName(e.target.value)}
+                                />
+                            </Form.Group>
+
+                            <Form.Group controlId='courseDescription'>
+                                <Form.Label>Description:</Form.Label>
+                                <Form.Control 
+                                    type="text" 
+                                    value={description} 
+                                    onChange={(e) => setDescription(e.target.value)}
+                                />
+                            </Form.Group>
+
+                            <Form.Group controlId='coursePrice'>
+                                <Form.Label>Price:</Form.Label>
+                                <Form.Control 
+                                    type="number" 
+                                    value={price} 
+                                    onChange={(e) => setPrice(e.target.value)}
+                                />
+                            </Form.Group>
+
+                            <Button type="submit" variant="success">Submit</Button>
+                            <Button type="submit" variant="secondary" onClick={closeAdd}>
+                                Close
+                            </Button>
+                        </Form>
+                    </Modal.Body>
+                </Modal>
+
+                {/*Edit course using a modal*/}
+                <Modal show={showAdd} onHide={closeAdd}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Edit Course</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <Form onSubmit = {(e) => editCourse(e,courseId)}>
+                            <Form.Group controlId='courseName'>
+                            <Form.Label>Course Name:</Form.Label>
+                                <Form.Control 
+                                    type="text" 
+                                    value={name} 
+                                    onChange={(e) => setName(e.target.value)}
+                                />
+                            </Form.Group>
+
+                            <Form.Group controlId='courseDescription'>
+                                <Form.Label>Description:</Form.Label>
+                                <Form.Control 
+                                    type="text" 
+                                    value={description} 
+                                    onChange={(e) => setDescription(e.target.value)}
+                                />
+                            </Form.Group>
+
+                            <Form.Group controlId='coursePrice'>
+                                <Form.Label>Price:</Form.Label>
+                                <Form.Control 
+                                    type="number" 
+                                    value={price} 
+                                    onChange={(e) => setPrice(e.target.value)}
+                                />
+                            </Form.Group>
+                            
+                            <Button type="submit" variant="success">Submit</Button>
+                            <Button type="submit" variant="secondary" onClick={closeAdd}>
+                                Close
+                            </Button>
+                        </Form>
+                    </Modal.Body>
+                </Modal>
+            </Container>
+        )
+
 }

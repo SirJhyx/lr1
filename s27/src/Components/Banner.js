@@ -1,7 +1,9 @@
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import  {Card} from 'react-bootstrap'
+import {Link} from 'react-router-dom';
 
-export default function Banner(){
+export default function Banner({data}){
+    const {title, content, destination, label} = data;
+
     return(
 
         <div className='container-fluid mt-2'>
@@ -9,11 +11,11 @@ export default function Banner(){
                 <Card>
                     <Card.Header>Welcome to React-Booking Application</Card.Header>
                     <Card.Body>
-                    <Card.Title>Opportunities for everyone and everywhere!</Card.Title>
+                    <Card.Title>{title}</Card.Title>
                     <Card.Text>
-                        Lorem Ipsum
+                        {content}
                     </Card.Text>
-                    <Button variant="primary">Enroll Now</Button>
+                    <Link to={destination}>{label}</Link>
                     </Card.Body>
                 </Card>
             </div>
