@@ -229,7 +229,27 @@
         <?php echo greeting(12); ?>
     </p>
 
-    <h2>Exercise 1: </h2>
+    <h2>Exercise 1: Full Address</h2>
+
+    <p>
+        <?php 
+            echo getFullAddress('18th Floor. The W Fifth Avenue, 5th Ave', 'Taguig City', 'Metro Manila', 'Philippines'); 
+            ?>
+    </p>
+
+    <h2> Exercise 2: Letter-Based Grading</h2>
+
+    <p>
+
+        87 is equivalent to
+        <?php
+             echo getLetterGrade(87);
+        ?>
+    </p>
+
+    <p>94 is equivalent to <?php echo getLetterGrade(94); ?></p>
+
+    <p>74 is equivalent to <?php echo getLetterGrade(74); ?></p>    
 
 </body>
 </html>
