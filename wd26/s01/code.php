@@ -69,4 +69,110 @@ $y = 912.6;
 $isLegalAge = true;
 $isRegistered = false;
 
+//Functions
+
+function getFullName ($firstName, $middleInitial, $lastName) {
+    return "$lastName, $firstName, $middleInitial";
+}
+
+//Selection Control Structures
+
+//if -elseif-else statement
+
+function determineTyphoonIntensity ($windSpeed) {
+    if ($windSpeed < 30) {
+
+        return 'Not a typhoon yet';
+
+    } else if ($windSpeed <= 60) {
+
+        return 'Tropical depression detected';
+
+    } else if ($windSpeed >= 62 && $windSpeed <= 88) {
+
+        return 'Tropical storm detected';
+
+    } else if ($windSpeed >= 89 && $windSpeed <= 177){
+
+        return 'Severe tropical storm detected';
+
+    } else {
+        return 'Typhoon detected';
+    }
+}
+
+//Conditional (Ternary) Operator
+
+function isUnderAge($age) {
+    return ($age < 18) ? true : false;
+}
+
+//Switch Statement
+function determineComputerUser($computerNumber){
+    switch ($computerNumber) {
+        case 1: 
+            return 'Linus Torvalds';
+            break; 
+
+        case 2: 
+            return 'Steve Jobs';
+            break;
+
+        case 3:
+            return 'Sid Meier';
+            break;
+
+        case 4:
+            return 'Albert Einstein';
+            break;
+            
+        case 5:
+            return 'Charles Babbage';
+            break;
+
+        default:
+            return $computerNumber.' is out of bounds.';
+    }
+}
+
+//Try-Catch-Finally - error handling
+
+/*
+    SYNTAX:
+    
+        try {
+        //condition
+    }
+    catch (Exception $variable)
+    {
+        //exception message
+    }
+
+    finally {
+
+        //message
+
+    }
+
+*/
+
+function greeting($str) {
+
+    try {
+        if (gettype($str) === "string"){
+            echo $str;
+        }
+
+        else {
+            throw new Exception("Oops!");
+        }
+    }
+    catch(Exception $e){
+        echo $e->getMessage();
+    }
+    finally {
+        echo "I did it again!";
+    }
+}
+
 ?>

@@ -182,5 +182,54 @@
             echo var_dump(!$isLegalAge or !$isRegistered);
         ?>
     </p>
+
+    <h2>Functions</h2>
+
+    <p>
+        <?php echo getFullName ('John', 'D', 'Smith'); ?>
+    </p>
+
+    <h2>Selection Control Structures</h2>
+
+    <h2>If-Else If-Else</h2>
+
+    <p>
+        <?php echo determineTyphoonIntensity(12); ?>
+    </p>
+
+    <p>
+        <?php echo determineTyphoonIntensity(117); ?>
+    </p>
+
+    <p>
+        <?php echo determineTyphoonIntensity(200); ?>
+    </p>
+
+    <h2>Ternary (is Underage)</h2>
+
+    <p>
+        <?php
+            var_dump(isUnderAge(78));
+        ?>
+    </p>
+
+    <h2>Switch Statement</h2>
+    
+    <p>
+        <?php echo determineComputerUser(8); ?>
+    </p>
+
+    <p>
+        <?php echo determineComputerUser(3); ?>
+    </p>
+
+    <h2>Try-Catch-Finally</h2>
+
+    <p>
+        <?php echo greeting(12); ?>
+    </p>
+
+    <h2>Exercise 1: </h2>
+
 </body>
 </html>
